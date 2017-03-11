@@ -53,3 +53,5 @@ EV代码签名证书（:微软与几大证书公司合作产生的一种用于�
  
 #驱动签名（驱动程序数字签名）
 可以使用微软提供的signTool工具或signCode工具，使用方法如下：
+````Bash
+SignTool sign /v /ac MSCV-VSClass3.cer /s my /n “xxxx Limited” /t http://timestamp.verisign.com/scripts/timestamp.dll drivercat.cat
