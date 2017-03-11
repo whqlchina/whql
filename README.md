@@ -52,6 +52,12 @@ EV代码签名证书（:微软与几大证书公司合作产生的一种用于�
 举例：某中国工厂同一个产品分别销售给美国IBM公司，德国BMW公司，以及法国雷诺公司，那么为了节省费用，中国工厂可以就这一个产品申请微软WINDOWS徽标认证，然后通过后台转售的方式分别转售给这三家公司，分别对应不同的产品型号。
  
 #驱动签名（驱动程序数字签名）
-可以使用微软提供的signTool工具或signCode工具，使用方法如下：
-````Bash
+1.首先使用工具生成CAT文件
+
+2.可以使用微软提供的signTool工具或signCode工具，使用方法如下：
+```Bash
 SignTool sign /v /ac MSCV-VSClass3.cer /s my /n “xxxx Limited” /t http://timestamp.verisign.com/scripts/timestamp.dll drivercat.cat
+```
+或者直接双击signCode.exe进行签名，选择安装好的数字证书，时间戳填：  http://timestamp.verisign.com/scripts/timestamp.dll
+
+如有不明白请联系我们。
